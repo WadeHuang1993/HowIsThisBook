@@ -27,3 +27,10 @@ EX: Android 程式設計實例入門 這本書
 後端：Apache + Laravel + PHP7。
 
 前端：未定。
+
+## 套件
+
+後端套件：
+  * .env 切換工作環境設定檔案
+  * deployer 程式部署工具
+  * migration 資料庫遷移程式
