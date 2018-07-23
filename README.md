@@ -1,4 +1,7 @@
 # How is this book
+
+![](https://img.shields.io/github/last-commit/WadeHuang1993/HowIsThisBook.svg)
+
 好書客，一個分享讀書心得的平台。
 
 ## 網站需求：
