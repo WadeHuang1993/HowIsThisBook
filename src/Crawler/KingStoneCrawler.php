@@ -24,7 +24,7 @@ class KingStoneCrawler
     /**
      * 發送爬蟲擷取頁面
      *
-     * @param string $url    URL
+     * @param string $url URL
      * @param string $method HTTP Methods
      *
      * @return $this
@@ -73,10 +73,7 @@ class KingStoneCrawler
      */
     public function getISBN()
     {
-        $match = [];
-        preg_match('/<span>ISBN：<\/span><em>(\d+)<\/em>/', $this->html, $match);
-
-        return $match[1];
+        return $this->htmlMatch('/<span>ISBN：<\/span><em>(\d+)<\/em>/');
     }
 
     /**
@@ -86,10 +83,7 @@ class KingStoneCrawler
      */
     public function getBookName()
     {
-        $match = [];
-        preg_match('/<h1>(.*)\r\n/', $this->html, $match);
-
-        return $match[1];
+        return $this->htmlMatch('/<h1>(.*)\r\n/');
     }
 
     /**
@@ -99,10 +93,7 @@ class KingStoneCrawler
      */
     public function getAuthor()
     {
-        $match = [];
-        preg_match('/<span>作者：<em><a.*;">(.*)<\/a>/', $this->html, $match);
-
-        return $match[1];
+        return $this->htmlMatch('/<span>作者：<em><a.*;">(.*)<\/a>/');
     }
 
     /**
@@ -112,10 +103,7 @@ class KingStoneCrawler
      */
     public function getPublishing()
     {
-        $match = [];
-        preg_match('/<span>出版社：<em><a.*;">(.*)<\/a>/', $this->html, $match);
-
-        return $match[1];
+        return $this->htmlMatch('/<span>出版社：<em><a.*;">(.*)<\/a>/');
     }
 
     /**
@@ -125,10 +113,7 @@ class KingStoneCrawler
      */
     public function getTranslator()
     {
-        $match = [];
-        preg_match('/<span>譯者：<\/span><em>(.*)<\/em>/', $this->html, $match);
-
-        return $match[1];
+        return $this->htmlMatch('/<span>譯者：<\/span><em>(.*)<\/em>/');
     }
 
     /**
@@ -138,10 +123,7 @@ class KingStoneCrawler
      */
     public function getSubTitle()
     {
-        $match = [];
-        preg_match('/<em><a href="#this".*;">(.*)<\/a><\/em>/', $this->html, $match);
-
-        return $match[1];
+        return $this->htmlMatch('/<em><a href="#this".*;">(.*)<\/a><\/em>/');
     }
 
     /**
@@ -151,9 +133,21 @@ class KingStoneCrawler
      */
     public function getPublishDate()
     {
-        $match = [];
-        preg_match('/<span>出版日：<\/span><em>(.*)<\/em>/', $this->html, $match);
+        return $this->htmlMatch('/<span>出版日：<\/span><em>(.*)<\/em>/');
+    }
 
-        return $match[1];
+    /**
+     * 擷取 HTML 頁面資訊
+     *
+     * @param String $pattern 正規表示方式規則
+     *
+     * @return mixed|string
+     */
+    protected function htmlMatch($pattern)
+    {
+        $match = [];
+        preg_match($pattern, $this->html, $match);
+
+        return isset($match[1]) ? $match[1] : '';
     }
 }
