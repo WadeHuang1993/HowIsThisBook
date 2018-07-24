@@ -4,7 +4,7 @@ namespace Src\Crawler;
 
 use Goutte\Client;
 
-class KingDomCrawler
+class KingStoneCrawler
 {
     protected $client;
     protected $response;
@@ -12,7 +12,7 @@ class KingDomCrawler
     protected $html;
 
     /**
-     * KingDomCrawler 建構方法.
+     * KingStoneCrawler 建構方法.
      *
      * @param Client $client HTTP Client
      */
@@ -24,7 +24,7 @@ class KingDomCrawler
     /**
      * 發送爬蟲擷取頁面
      *
-     * @param string $url    Target Url
+     * @param string $url    URL
      * @param string $method HTTP Methods
      *
      * @return $this

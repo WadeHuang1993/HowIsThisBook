@@ -1,9 +1,9 @@
 <?php
 
-use Src\Crawler\KingDomCrawler;
+use Src\Crawler\KingStoneCrawler;
 use Goutte\Client;
 
-class testKingDomCrawler extends PHPUnit\Framework\TestCase
+class testKingStoneCrawler extends PHPUnit\Framework\TestCase
 {
 
     /**
@@ -15,9 +15,8 @@ class testKingDomCrawler extends PHPUnit\Framework\TestCase
         $url     = 'https://www.kingstone.com.tw/basics/basics.asp?kmcode=2013120471221&actid=ActBillBoard';
 
         $client  = new Client();
-        $crawler = new KingDomCrawler($client);
-        $crawler->send($url)
-            ->html();
+        $crawler = new KingStoneCrawler($client);
+        $crawler->send($url)->html();
 
         // Act
         $crawler->getBookInfo();
