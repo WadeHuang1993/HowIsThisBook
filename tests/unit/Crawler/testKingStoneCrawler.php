@@ -34,6 +34,9 @@ class testKingStoneCrawler extends PHPUnit\Framework\TestCase
         $this->assertEquals($expected, $bookInfo);
     }
 
+    /**
+     * 使用書籍名稱搜尋書籍，並擷取搜尋結果
+     */
     public function testSearchBookByName()
     {
         $client  = new Client();
