@@ -68,3 +68,4 @@ Apache + Laravel + PHP7。
 3. 開放檔案目錄更改權限，開放目錄如下:
    (1). storage。
    (2). bootstrap/cache
+4. 至根目錄執行 composer 更新。 `composer install`
