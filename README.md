@@ -2,6 +2,7 @@
 
 ![](https://img.shields.io/github/last-commit/WadeHuang1993/HowIsThisBook.svg)
 ![](https://img.shields.io/travis/php-v/symfony/symfony.svg)
+![](https://img.shields.io/badge/Laravel-5.6-f4645f.svg)
 
 好書客，一個分享讀書心得的平台。
 
