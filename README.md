@@ -61,3 +61,10 @@ Apache + Laravel + PHP7。
   * .env 切換工作環境設定檔案
   * deployer 程式部署工具
   * migration 資料庫遷移程式
+
+## 建站步驟
+1. 設置好需求環境: php >= 7.1。
+2. 設置自定義 .env。
+3. 開放檔案目錄更改權限，開放目錄如下:
+   (1). storage。
+   (2). bootstrap/cache
