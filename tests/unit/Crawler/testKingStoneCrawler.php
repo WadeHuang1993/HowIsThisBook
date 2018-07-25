@@ -43,7 +43,7 @@ class testKingStoneCrawler extends PHPUnit\Framework\TestCase
         $crawler = new KingStoneCrawler($client);
 
         $bookName = '不需要電腦的程式設計課：從遊戲中學習電腦語言';
-        $books = $crawler->searchBook($bookName);
+        $books    = $crawler->searchBook($bookName);
 
         $expected = [
             [
@@ -56,6 +56,23 @@ class testKingStoneCrawler extends PHPUnit\Framework\TestCase
                 'translator'  => '魏嘉儀',
             ],
         ];
+
+        $this->assertEquals($expected, $books);
+    }
+
+
+    /**
+     * 若搜尋到 0 筆書籍，則回傳空陣列
+     */
+    public function testSearchBookByNameWithNoResult()
+    {
+        $client  = new Client();
+        $crawler = new KingStoneCrawler($client);
+
+        $bookName = '軪';
+        $books    = $crawler->searchBook($bookName);
+
+        $expected = [];
 
         $this->assertEquals($expected, $books);
     }
