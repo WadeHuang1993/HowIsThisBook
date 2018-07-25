@@ -44,8 +44,6 @@ EX: Android 程式設計實例入門 這本書
 
 爬蟲目標，多家書商輪替爬。
 1. 使用者搜尋時再爬
-2. 定時爬
-3. 租代理IP（如果想短時間大量爬的話）
 
 後端：
 
@@ -59,13 +57,13 @@ Apache + Laravel + PHP7。
 
 後端套件：
   * .env 切換工作環境設定檔案
-  * deployer 程式部署工具
+  * deploy 程式部署工具
   * migration 資料庫遷移程式
 
 ## 建站步驟
-1. 設置好需求環境: php >= 7.1。
-2. 設置自定義 .env。
-3. 開放檔案目錄更改權限，開放目錄如下:
-   (1). storage。
-   (2). bootstrap/cache
-4. 至根目錄執行 composer 更新。 `composer install`
+  1. 設置好需求環境: php >= 7.1。
+  2. 根據 Laravel 執行環境，從 env 目錄複製對應的 xxxx.env 設定檔案至根目錄，並改名為 .env。
+  3. 開放檔案目錄更改權限，開放目錄如下:
+     * storage。
+     * bootstrap/cache
+  4. 至根目錄執行 composer 安裝指令。 `composer install`
