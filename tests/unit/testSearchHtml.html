@@ -1,0 +1,1184 @@
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>金石堂網路書店 - 您目前搜尋的關鍵字為：不需要電腦的程式設計課：從遊戲中學習電腦語言 </title>
+    <meta name="description" content="金石堂網路書店－搜尋「不需要電腦的程式設計課：從遊戲中學習電腦語言」相關書籍、雜誌、文具、生活用品">
+    <meta name="keywords" content="金石堂, 金石堂網路, 網路書店, 書店, 不需要電腦的程式設計課：從遊戲中學習電腦語言">
+    <link rel="Shortcut Icon" href="k.ico">
+    <link rel="Bookmark" href="k.ico">
+    <link rel="stylesheet" href="/css/core/reset.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/css/core/base.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/css/core/container.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/css/search/search.css?2018/7/24%20%E4%B8%8B%E5%8D%88%2005:19:10" type="text/css"
+          media="all">
+
+    <link rel="Shortcut Icon" href="https://www.kingstone.com.tw/k.ico">
+    <link rel="Bookmark" href="https://www.kingstone.com.tw/k.ico">
+    <link rel="icon" href="https://www.kingstone.com.tw/k.ico" type="image/ico">
+
+
+    <style type="text/css">span.hha {
+        display: none !important;
+    }</style>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/JavaScript" src="/js/jquery.cookie.js"></script>
+    <script type="text/JavaScript" src="/js/jquery.blockUI.js"></script>
+    <script type="text/JavaScript" src="/js/jquery.autocomplete_utf.js"></script>
+    <script type="text/JavaScript" src="/js/webcart_in.js"></script>
+    <script type="text/JavaScript" src="/js/jquery.ui.core.js"></script>
+    <script type="text/JavaScript" src="/js/jquery.ui.widget.js"></script>
+    <script type="text/JavaScript" src="/js/jquery.ui.tabs.js"></script>
+    <script type="text/javascript" src="/js/jquery.lazyload.min.js"></script>
+    <script type="text/javascript" src="/js/twzipcode-1.4.js"></script>
+    <script type="text/javascript" src="/js/Shopcart_Fun.js?ver2"></script>
+    <script type="text/JavaScript">
+        $(document).ready(function () {
+//&#30435;&#25511;&#32178;&#38913;&#36895;&#24230;
+//var appInsights=window.appInsights||function(config){
+//  function i(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s="AuthenticatedUserContext",h="start",c="stop",l="Track",a=l+"Event",v=l+"Page",y=u.createElement(o),r,f;y.src=config.url||"https://az416426.vo.msecnd.net/scripts/a/ai.0.js";u.getElementsByTagName(o)[0].parentNode.appendChild(y);try{t.cookie=u.cookie}catch(p){}for(t.queue=[],t.version="1.0",r=["Event","Exception","Metric","PageView","Trace","Dependency"];r.length;)i("track"+r.pop());return i("set"+s),i("clear"+s),i(h+a),i(c+a),i(h+v),i(c+v),i("flush"),config.disableExceptionTracking||(r="onerror",i("_"+r),f=e[r],e[r]=function(config,i,u,e,o){var s=f&&f(config,i,u,e,o);return s!==!0&&t["_"+r](config,i,u,e,o),s}),t
+//}({
+//  instrumentationKey:"b6d6bac7-ae60-44e1-a2ee-c0acee8f0c51"
+// });
+// window.appInsights=appInsights;
+// appInsights.trackPageView();
+
+            var loginname = $.cookie('cname');
+            var loginid = $.cookie('username');
+            var loginPW = $.cookie('KSPW');
+            var isPhone = $.cookie('phoneid');
+            var fbemail = $.cookie('fbemail');
+            /*partner price controller for module*/
+            $("span.hha").remove();
+            if ($("div.tab_panel").size() > 0) {
+                $("div.tab_panel").tabs({event: "mouseover"});
+            }
+            $(".tab_panel").bind("tabsselect", function (event, ui) {
+                $(ui.panel).find("img.delay").each(function (i, el) {
+                    $(el).attr("src", $(el).attr("osrc")).removeClass("delay");
+                });
+            });
+            $("#s_name").autocomplete('/Common/search.asp', {
+                delay: 10,
+                width: 150,
+                minChars: 1,
+                matchSubset: false,
+                matchContains: false,
+                cacheLength: 0,
+                noCache: true,
+                autoFill: false,
+                mustMatch: false
+            });
+            $("#carinfo,#topcartinfo").load('/include/webcart.asp')
+            $("#memberAccount").load('/common/memberAccount.asp?' + Math.random());
+            /*header marketing bn*/
+            if ($('#header_ad').size() > 0) {
+                var $header_ad_tabs = $('#header_ad').tabs();
+                $header_ad_tabs.tabs('select', Math.floor((Math.random() * $header_ad_tabs.tabs("length"))) + 1);
+            }
+            /*dks*/
+            if ($.cookie('UEVENT') == 'DKS') {
+                location.href = 'https://www.kingstone.com.tw/membe/dksr/Login.asp';
+            }
+            if (loginname != null && loginname != '') {
+                $("#logName").html(loginname + $("#logName").html());
+                $("#div_notlog").hide();
+                $("#div_logged").show();
+                if (fbemail != null && fbemail != '') {
+                    $("#fb-logout").show();
+                    $("#logout").hide();
+                } else {
+                    $("#logout").show();
+                }
+                ;
+            } else {
+                $("#div_logged").hide();
+            }
+            SetPartner();
+            viewpoint();
+            $(window).resize(function () {
+                viewpoint();
+            });
+
+            /*for ie10*/
+            $('iframe').each(function () {
+                if ($(this).attr("src").indexOf("?") == -1) {
+                    $(this).attr("src", $(this).attr("src") + '?wmode=transparent');
+                } else {
+                    $(this).attr("src", $(this).attr("src") + '&wmode=transparent');
+                }
+            });
+            $("img.lazy").lazyload({effect: "fadeIn", threshold: 200, placeholder: "/images/grey.gif"});
+        });
+
+        function PicChange1(str, cc) {
+            str = str + ",";
+            while (str.indexOf(",") > 0) {
+                str1 = str.substring(0, str.indexOf(","));
+                if (cc != str1) {/*document.getElementById(str1).style.backgroundColor='#000000';*/
+                }
+                str = str.substring(str.indexOf(",") + 1, str.length)
+            }
+        }
+
+        function ClassChange(str, cc) {
+            str = str + ",";
+            while (str.indexOf(",") > 0) {
+                str1 = str.substring(0, str.indexOf(","));
+                if (cc != str1) {
+                    document.getElementById(str1).className = '';
+                } else {
+                    document.getElementById(str1).className = 'on';
+                }
+                str = str.substring(str.indexOf(",") + 1, str.length)
+            }
+        }
+
+        function SetBannerMove(banID, maxN, banIndex) {
+            var ban;
+            var banNum = parseInt(ban.charAt(2));
+            $('a[id^="' + banID + '"]').each(function () {
+                if ($(this).hasClass('on')) {
+                    ban = $(this).attr('id');
+                }
+            });
+            if (banIndex == 1) {
+                if (banNum == maxN) {
+                    banNum = 1;
+                } else {
+                    banNum += banIndex;
+                }
+            } else {
+                if (banNum == 1) {
+                    banNum = maxN;
+                } else {
+                    banNum += banIndex;
+                }
+            }
+            $("#" + banID + banNum).trigger('mouseover');
+        }
+
+        function noImg(obj) {
+            obj.src = "/images/noimg.gif";
+        }
+
+        function viewpoint() {
+            var wdth;
+            wdth = $(window).width();
+            //alert(wdth);
+            if (wdth <= 900 || jQuery.browser.mobile == true) {
+                $('#pc_herd').hide();
+                $('#m_herd').show();
+            } else {
+                $('#m_herd').hide();
+                $('#pc_herd').show();
+            }
+        }
+
+        function pagelid(targetPage, targetArea, targetLid, targetLink) {
+            $.ajax({
+                url: "/Include/lid_count.asp?targetLid=" + targetLid + "&targetpage=" + encodeURIComponent(targetPage) + "&area=" + targetArea + "&targetLink=" + targetLink,
+                success: function (res) {
+                    if (targetLink.indexOf("?") == -1) {
+                        location.href = targetLink + '?';
+                    }
+                    else {
+                        location.href = targetLink
+                    }
+                    ;
+                }
+            })
+        }
+
+
+        function SearchLink(strValue1, strValue2, strValue3) {
+            if (strValue2 == "&#20013;&#25991;&#26360;") {
+                strValue2 = "1"
+            } else if (strValue2 == "&#33521;&#25991;&#26360;") {
+                strValue2 = "12"
+            } else if (strValue2 == "&#38620;&#35468;") {
+                strValue2 = "13"
+            } else if (strValue2 == "MOOK") {
+                strValue2 = "23"
+            } else if (strValue2 == "&#31777;&#39636;&#26360;") {
+                strValue2 = "35"
+            } else if (strValue2 == "&#25991;&#20855;") {
+                strValue2 = "19"
+            } else if (strValue2 == "&#29609;&#20855;") {
+                strValue2 = "20"
+            } else if (strValue2 == "&#26381;&#39166;&#37197;&#20214;") {
+                strValue2 = "14"
+            } else if (strValue2 == "3C&#23478;&#38651;") {
+                strValue2 = "30"
+            } else if (strValue2 == "&#36939;&#21205;&#20241;&#38290;") {
+                strValue2 = "32"
+            } else if (strValue2 == "&#23621;&#23478;&#29983;&#27963;") {
+                strValue2 = "29"
+            } else if (strValue2 == "&#21205;&#28459;&#37096;&#23627;") {
+                strValue2 = "34"
+            } else if (strValue2 == "&#26085;&#29992;&#28165;&#28500;") {
+                strValue2 = "36"
+            } else if (strValue2 == "&#23142;&#24188;") {
+                strValue2 = "37"
+            } else if (strValue2 == "&#39135;&#21697;") {
+                strValue2 = "31"
+            } else {
+                strValue2 = "4"
+            }
+            ;
+            strValue1 = strValue1.replace(/\'/g, "&#65287;");
+            strValue1 = strValue1.replace(/\:/g, "&#65306;");
+            strValue1 = strValue1.replace(/\./g, "&#65294;");
+            strValue1 = strValue1.replace(/\~/g, "&#65374;");
+            strValue1 = strValue1.replace(/\)/g, "&#65289;");
+            strValue1 = strValue1.replace(/\(/g, "&#65288;");
+
+            var t = "/search/result.asp?c_name=" + escape(encodeURIComponent(strValue1)) + "&se_type=" + strValue2 + "&q_type=" + strValue3;
+            return t;
+
+        }
+    </script>
+
+
+    <link rel="stylesheet" href="/css/core/responsiveslides.css">
+    <script type="text/javascript" src="/js/responsiveslides.js"></script>
+
+</head>
+<body>
+
+<div id="fb-root"></div>
+<div id="index">
+    <!-- index&#28858;&#39208;&#21029;&#21517;&#65292;&#20381;&#29031;&#39208;&#21029;&#21517;&#39023;&#31034;&#30340;header&#22871;&#33394;&#22871;&#22294;&#19981;&#21516;&#12290;&#21487;&#26367;&#25563;&#28858;book&#30475;&#25928;&#26524;&#12290; -->
+
+
+    <div id="quicker">
+        <h3>會員功能列</h3>
+        <div id="member">
+            <span class="deco_icon"> </span>
+            <!-- hide after login -->
+            <div id="div_notlog">
+
+                <span><a id="link_memjoin" href="https://www.kingstone.com.tw/member/join01.asp" title="加入金石堂網路書店會員">加入會員</a></span>
+
+                <span><a id="link_login"
+                         href="https://www.kingstone.com.tw/member/Login.asp?BackURL=https%3A%2F%2Fwww%2Ekingstone%2Ecom%2Etw%2Fsearch%2Fresult%2Easp%3Fc%5Fname%3D%2525E4%2525B8%25258D%2525E9%25259C%252580%2525E8%2525A6%252581%2525E9%25259B%2525BB%2525E8%252585%2525A6%2525E7%25259A%252584%2525E7%2525A8%25258B%2525E5%2525BC%25258F%2525E8%2525A8%2525AD%2525E8%2525A8%252588%2525E8%2525AA%2525B2%2525EF%2525BC%25259A%2525E5%2525BE%25259E%2525E9%252581%25258A%2525E6%252588%2525B2%2525E4%2525B8%2525AD%2525E5%2525AD%2525B8%2525E7%2525BF%252592%2525E9%25259B%2525BB%2525E8%252585%2525A6%2525E8%2525AA%25259E%2525E8%2525A8%252580%26se%5Ftype%3D4"
+                         title="請登入金石堂網路書店"><b>登入</b></a></span>
+            </div>
+            <!-- hide after login -->
+            <!-- show after login -->
+            <div id="div_logged" style="display:none">
+                <span id="logName">您好</span>
+                <span id="logout"><a id="link_logout"
+                                     href="https://www.kingstone.com.tw/Member/Login.asp?Process=Logout"
+                                     title="登出金石堂網路書店"><b>登出</b></a></span>
+            </div>
+            <!-- show after login -->
+
+            <span><a href="https://www.kingstone.com.tw/member/member.asp?" title="金石堂網路書店會員專區">會員專區</a></span>
+            <span><a href="https://www.kingstone.com.tw/QnA/QA_index.asp" title="金石堂網路書店客服中心">客服中心</a></span>
+            <span><a href="https://www.kingstone.com.tw/Order/OrderList.asp" title="查詢您的訂單">查訂單</a></span>
+        </div>
+        <div id="cart">
+            <span class="deco_icon"> </span>
+            <div id="topcartinfo">
+                <span>（ 0 件）</span><span>0 元</span>
+            </div>
+            <span><a href="https://www.kingstone.com.tw/cash/cart1.asp?CarType=WEB" title="請前往結帳">結帳</a></span>
+        </div>
+        <div style="border-left: 1px solid #C3C3C2">
+            <!--span><a href="https://www.kingstone.com.tw/event/0809_aorder18/order18.asp" title="&#24555;&#36895;&#21462;&#36008;"><img src="/images/KS_TopPartnerLogo_icons.gif" alt="order18" /></a></span-->
+            <span style="padding:0;"><a href="https://zh-tw.facebook.com/kingstonefb/" title="facebook" target="_blank"><img
+                    src="/images/ks_topfb_icons.gif" alt="facebook"></a></span>
+            <span><img src="/images/ks_toppartnerlogo_icons.gif" alt="order18"></span>
+            <span><a href="https://www.kingstone.com.tw/QnA/qa_answer.asp?qid=A006" title="Happy Go"><img
+                    src="/images/ks_tophappergo_icons.gif" alt="Happy Go"></a></span>
+            <span><a href="https://www.kingstone.com.tw/event/ponta/ponta_index.asp" title="Ponta"><img
+                    src="/images/ks_topponta_icons.gif" alt="Ponta"></a></span>
+            <span><a href="https://www.kingstone.com.tw/event/paypal/paypal01.asp" title="paypal"><img
+                    src="/images/ks_toppaypal_icons.gif" alt="paypal"></a></span>
+            <span><a href="https://www.kingstone.com.tw/QnA/qa_answer.asp?qid=C012" title="LINE Pay"><img
+                    src="/images/ks_toplinepay_icons.gif" alt="LINE Pay"></a></span>
+        </div>
+    </div>
+
+    <div id="webcart" style="top: 5%;">
+        <h3>購物車</h3>
+        <div id="carinfo">
+            <span>（ 0 件）</span><span>0 元</span>
+        </div>
+        <span><a href="https://www.kingstone.com.tw/cash/cart1.asp?CarType=WEB" title="請前往結帳"><span>結帳</span></a></span>
+    </div>
+
+    <!--include file="header_topbn.asp"-->
+    <div id="headerTopBn"></div>
+    <script>
+        $("#headerTopBn").load("https://www.kingstone.com.tw/templates/index/header_topbn.asp");
+    </script>
+
+    <div class="indexCareNote2">
+
+        <br>
+
+    </div>
+
+    <div id="header">
+        <div class="content_wrapper">
+            <h2 id="h2_Logo">
+                <a href="https://www.kingstone.com.tw" title="金石堂">金石堂網路書店歡迎您加入部落客和facebook 臉書粉絲團！The largest retail
+                    books store chains in Taiwan! </a>
+            </h2>
+
+            <script language="javascript">
+                function Click_k() {
+//	if (document.getElementById('s_name').value=='&#19981;&#38656;&#35201;&#38651;&#33126;&#30340;&#31243;&#24335;&#35373;&#35336;&#35506;&#65306;&#24478;&#36938;&#25138;&#20013;&#23416;&#32722;&#38651;&#33126;&#35486;&#35328;') document.getElementById('s_name').value='';
+                }
+
+                function convertData() {
+                    if (document.getElementById('s_name').value == '') {
+                        alert('&#35531;&#36664;&#20837;&#25628;&#23563;&#26781;&#20214;');
+                        return false;
+                    }
+                    var str = document.getElementById('s_name').value;
+                    str = str.replace(/\'/g, "&#65287;");
+                    str = str.replace(/\:/g, "&#65306;");
+                    str = str.replace(/\./g, "&#65294;");
+                    str = str.replace(/\~/g, "&#65374;");
+                    str = str.replace(/\)/g, "&#65289;");
+                    str = str.replace(/\(/g, "&#65288;");
+                    str = str.replace(/\[/g, "&#12308;");
+                    str = str.replace(/\]/g, "&#12309;");
+                    str = str.replace(/\!/g, "&#65281;");
+                    document.getElementById('c_name').value = encodeURIComponent(str);
+                    return true;
+                }
+
+            </script>
+            <div id="search">
+                <!-- template=2018/7/24 &#19979;&#21320; 03:31:22 --><!-- data=2018/7/24 &#19979;&#21320; 03:06:10 -->
+                <div id="common-index-hotkeywords-top" class="box ">
+                    <h2>TOP關鍵字</h2>
+                    <ul>
+                        <li><a href="javascript:void(0)"
+                               onclick="javascript:pagelid('蔡璧名莊子','common-index-hotkeywords-top','1','/search/result.asp?c_name=%25E8%2594%25A1%25E7%2592%25A7%25E5%2590%258D&amp;se_type=1&amp;sr1=館別&amp;sr2=中文書&amp;q_type=au&amp;sort=pu_desc&amp;lid=common-index-hotkeywords-top&amp;actid=wise');"
+                               title="蔡璧名莊子" class="anchor"><span>蔡璧名莊子</span></a></li>
+                        <li><a href="javascript:void(0)"
+                               onclick="javascript:pagelid('領紅利','common-index-hotkeywords-top','2','/event/1807_mkt01mer/game.asp?lid=common-index-hotkeywords-top&amp;actid=wise');"
+                               title="領紅利" class="anchor"><span>領紅利</span></a></li>
+                        <li><a href="javascript:void(0)"
+                               onclick="javascript:pagelid('TOP暢銷展','common-index-hotkeywords-top','3','/event/1806_a324/324.asp?lid=common-index-hotkeywords-top&amp;actid=wise');"
+                               title="TOP暢銷展" class="anchor"><span>TOP暢銷展</span></a></li>
+                        <li><a href="javascript:void(0)"
+                               onclick="javascript:pagelid('第5屆希望書包','common-index-hotkeywords-top','4','/event/1806_a151/151.asp?lid=common-index-hotkeywords-top&amp;actid=wise');"
+                               title="第5屆希望書包" class="anchor"><span>第5屆希望書包</span></a></li>
+                        <li><a href="javascript:void(0)"
+                               onclick="javascript:pagelid('大腦衝浪','common-index-hotkeywords-top','5','/basics/basics.asp?kmcode=2011771210107&amp;lid=common-index-hotkeywords-top&amp;actid=wise');"
+                               title="大腦衝浪" class="anchor"><span>大腦衝浪</span></a></li>
+
+                    </ul>
+
+                </div>
+
+
+                <form name="se_form1" method="get" action="/search/result.asp" onsubmit="return convertData();">
+                    <input type="hidden" name="c_name" id="c_name">
+                    <input type="text" id="s_name" class="input_text" value="不需要電腦的程式設計課：從遊戲中學習電腦語言"
+                           onclick="Click_k();" title="可輸入書名、作者、出版社或BarCode唷!">
+                    <select name="se_type" id="se_type">
+
+                        <option value="4" selected>全館搜尋</option>
+                        <option value="1">中文書</option>
+                        <option value="12">英文書</option>
+                        <!--option value="35">&#31777;&#39636;&#26360;</option-->
+                        <option value="13">雜誌</option>
+                        <option value="23">MOOK</option>
+                        <option value="19">文具</option>
+                        <option value="20">玩具親子</option>
+                        <!--option value="14">&#32654;&#22941;&#37197;&#39166;</option-->
+                        <option value="30">3C</option>
+                        <option value="39">家電</option>
+                        <!--option value="32">&#36939;&#21205;&#20241;&#38290;</option-->
+                        <option value="29">居家休閒</option>
+                        <option value="36">日用品</option>
+                        <option value="34">動漫精品</option>
+                        <option value="31">食品</option>
+
+                    </select>
+                    <input type="submit" value="搜尋" class="btn btn1">
+                    <input type="button" name="adv_search" value="進階搜尋" class="btn btn2"
+                           onclick="location.href='/templates/index/SE_Advance_wise.asp'">
+                </form>
+            </div>    <!-- template=2018/7/24 &#19979;&#21320; 03:31:13 -->
+            <!-- data=2018/7/24 &#19979;&#21320; 03:06:10 -->
+            <div id="header_ad" class="tab_panel ">
+                <h2>天花版bn</h2>
+                <ol>
+                    <li><a href="#tab-1">1</a></li>
+                    <li><a href="#tab-2">2</a></li>
+                    <li><a href="#tab-3">3</a></li>
+                    <li><a href="#tab-4">4</a></li>
+                    <li><a href="#tab-5">5</a></li>
+                    <li><a href="#tab-6">6</a></li>
+                    <li><a href="#tab-7">7</a></li>
+                    <li><a href="#tab-8">8</a></li>
+                    <li><a href="#tab-9">9</a></li>
+                </ol>
+                <div id="tab-1">
+                    <ul>
+                        <li><a href="javascript:void(0)"
+                               onclick="javascript:pagelid('https://cdn.kingstone.com.tw/newadmin/userpics/180x70_d1807003-1.gif','common-header-marketing-bn','1','https://www.kingstone.com.tw/ticket/book_page.asp?kmcode=8010000000025&amp;lid=common-header-marketing-bn&amp;actid=wise');"
+                               class="anchor"><img
+                                src="https://cdn.kingstone.com.tw/newadmin/userpics/180x70_d1807003-1.gif"
+                                alt=""><span></span></a></li>
+                        <li><a href="javascript:void(0)"
+                               onclick="javascript:pagelid('https://cdn.kingstone.com.tw/newadmin/userpics/180x70_d1708001-1.jpg','common-header-marketing-bn','2','https://www.kingstone.com.tw/search/result.asp?c_name=%25E6%259F%25AF%25E5%258D%2597&amp;se_type=34&amp;sr1=館別&amp;sr2=動漫部屋&amp;dis=img&amp;page=2&amp;lid=common-header-marketing-bn&amp;actid=wise');"
+                               class="anchor"><img
+                                src="https://cdn.kingstone.com.tw/newadmin/userpics/180x70_d1708001-1.jpg"
+                                alt=""><span></span></a></li>
+                    </ul>
+                </div>
+                <div id="tab-2" class="ui-tabs-hide">
+                    <ul>
+                        <li><a href="javascript:void(0)"
+                               onclick="javascript:pagelid('https://cdn.kingstone.com.tw/newadmin/userpics/180x70_d1706003-1.jpg','common-header-marketing-bn','3','https://www.kingstone.com.tw/event/exhibition/a02/periodical_word.asp?actno=d1706003&amp;ver=99元活動&amp;tid=1&amp;lid=common-header-marketing-bn&amp;actid=wise');"
+                               class="anchor"><img
+                                src="https://cdn.kingstone.com.tw/newadmin/userpics/180x70_d1706003-1.jpg"
+                                alt=""><span></span></a></li>
+                        <li><a href="javascript:void(0)"
+                               onclick="javascript:pagelid('https://cdn.kingstone.com.tw/newadmin/userpics/180x70_a1806185-1.gif','common-header-marketing-bn','4','https://www.kingstone.com.tw/event/activity/module.asp?active=A1705038&amp;cid=142274&amp;lid=common-header-marketing-bn&amp;actid=wise');"
+                               class="anchor"><img
+                                src="https://cdn.kingstone.com.tw/newadmin/userpics/180x70_a1806185-1.gif"
+                                alt=""><span></span></a></li>
+                    </ul>
+                </div>
+                <div id="tab-3" class="ui-tabs-hide">
+                    <ul>
+                        <li><a href="javascript:void(0)"
+                               onclick="javascript:pagelid('https://cdn.kingstone.com.tw/newadmin/userpics/180x70_a1806227-1.jpg','common-header-marketing-bn','5','https://www.kingstone.com.tw/event/activity/module.asp?active=a1504003&amp;cid=120147&amp;lid=common-header-marketing-bn&amp;actid=wise');"
+                               class="anchor"><img
+                                src="https://cdn.kingstone.com.tw/newadmin/userpics/180x70_a1806227-1.jpg"
+                                alt=""><span></span></a></li>
+                        <li><a href="javascript:void(0)"
+                               onclick="javascript:pagelid('https://cdn.kingstone.com.tw/newadmin/userpics/180x70_a1804124-1.jpg','common-header-marketing-bn','6','https://www.kingstone.com.tw/event/activity/module.asp?active=A1409331&amp;cid=83191&amp;lid=common-header-marketing-bn&amp;actid=wise');"
+                               class="anchor"><img
+                                src="https://cdn.kingstone.com.tw/newadmin/userpics/180x70_a1804124-1.jpg"
+                                alt=""><span></span></a></li>
+                    </ul>
+                </div>
+                <div id="tab-4" class="ui-tabs-hide">
+                    <ul>
+                        <li><a href="javascript:void(0)"
+                               onclick="javascript:pagelid('https://cdn.kingstone.com.tw/newadmin/userpics/180x70_a1806256-1.jpg','common-header-marketing-bn','7','https://www.kingstone.com.tw/event/activity/module.asp?active=A1404118&amp;cid=144322&amp;lid=common-header-marketing-bn&amp;actid=wise');"
+                               class="anchor"><img
+                                src="https://cdn.kingstone.com.tw/newadmin/userpics/180x70_a1806256-1.jpg"
+                                alt=""><span></span></a></li>
+                        <li><a href="javascript:void(0)"
+                               onclick="javascript:pagelid('https://cdn.kingstone.com.tw/newadmin/userpics/180x70_d1712007-1.gif','common-header-marketing-bn','8','https://www.kingstone.com.tw/event/activity/activity.asp?active=d1806004&amp;cid=156253&amp;lid=common-header-marketing-bn&amp;actid=wise');"
+                               class="anchor"><img
+                                src="https://cdn.kingstone.com.tw/newadmin/userpics/180x70_d1712007-1.gif"
+                                alt=""><span></span></a></li>
+                    </ul>
+                </div>
+                <div id="tab-5" class="ui-tabs-hide">
+                    <ul>
+                        <li><a href="javascript:void(0)"
+                               onclick="javascript:pagelid('https://cdn.kingstone.com.tw/newadmin/userpics/180x70_d1807001-1.jpg','common-header-marketing-bn','9','https://www.kingstone.com.tw/event/activity/activity.asp?active=d1706007&amp;cid=156554&amp;lid=common-header-marketing-bn&amp;actid=wise');"
+                               class="anchor"><img
+                                src="https://cdn.kingstone.com.tw/newadmin/userpics/180x70_d1807001-1.jpg"
+                                alt=""><span></span></a></li>
+                        <li><a href="javascript:void(0)"
+                               onclick="javascript:pagelid('https://cdn.kingstone.com.tw/newadmin/userpics/180x70_a1806272-1.gif','common-header-marketing-bn','10','https://www.kingstone.com.tw/event/activity/activity.asp?active=a1606276&amp;cid=156524&amp;lid=common-header-marketing-bn&amp;actid=wise');"
+                               class="anchor"><img
+                                src="https://cdn.kingstone.com.tw/newadmin/userpics/180x70_a1806272-1.gif"
+                                alt=""><span></span></a></li>
+                    </ul>
+                </div>
+                <div id="tab-6" class="ui-tabs-hide">
+                    <ul>
+                        <li><a href="javascript:void(0)"
+                               onclick="javascript:pagelid('https://cdn.kingstone.com.tw/newadmin/userpics/180x70_a1807121-1.jpg','common-header-marketing-bn','11','https://www.kingstone.com.tw/event/activity/activity.asp?active=a1412287&amp;cid=156686&amp;lid=common-header-marketing-bn&amp;actid=wise');"
+                               class="anchor"><img
+                                src="https://cdn.kingstone.com.tw/newadmin/userpics/180x70_a1807121-1.jpg"
+                                alt=""><span></span></a></li>
+                        <li><a href="javascript:void(0)"
+                               onclick="javascript:pagelid('https://cdn.kingstone.com.tw/newadmin/userpics/180x70_mkt180701mer_circle1.gif','common-header-marketing-bn','12','https://www.kingstone.com.tw/event/1807_mkt01mer/game.asp?lid=common-header-marketing-bn&amp;actid=wise');"
+                               class="anchor"><img
+                                src="https://cdn.kingstone.com.tw/newadmin/userpics/180x70_mkt180701mer_circle1.gif"
+                                alt=""><span></span></a></li>
+                    </ul>
+                </div>
+                <div id="tab-7" class="ui-tabs-hide">
+                    <ul>
+                        <li><a href="javascript:void(0)"
+                               onclick="javascript:pagelid('https://cdn.kingstone.com.tw/newadmin/userpics/180x70_d1806005-1.jpg','common-header-marketing-bn','13','https://www.kingstone.com.tw/event/0000_ticket/ticket.asp?lid=common-header-marketing-bn&amp;actid=wise');"
+                               class="anchor"><img
+                                src="https://cdn.kingstone.com.tw/newadmin/userpics/180x70_d1806005-1.jpg"
+                                alt=""><span></span></a></li>
+                        <li><a href="javascript:void(0)"
+                               onclick="javascript:pagelid('https://cdn.kingstone.com.tw/newadmin/userpics/180x70_a1807158-1.gif','common-header-marketing-bn','14','https://www.kingstone.com.tw/basics/basics.asp?kmcode=2019478947463&amp;lid=common-header-marketing-bn&amp;actid=wise');"
+                               class="anchor"><img
+                                src="https://cdn.kingstone.com.tw/newadmin/userpics/180x70_a1807158-1.gif"
+                                alt=""><span></span></a></li>
+                    </ul>
+                </div>
+                <div id="tab-8" class="ui-tabs-hide">
+                    <ul>
+                        <li><a href="javascript:void(0)"
+                               onclick="javascript:pagelid('https://cdn.kingstone.com.tw/newadmin/userpics/180x70_a1806296-1.jpg','common-header-marketing-bn','15','https://www.kingstone.com.tw/basics/basics.asp?kmcode=2019478944547&amp;lid=common-header-marketing-bn&amp;actid=wise');"
+                               class="anchor"><img
+                                src="https://cdn.kingstone.com.tw/newadmin/userpics/180x70_a1806296-1.jpg"
+                                alt=""><span></span></a></li>
+                        <li><a href="javascript:void(0)"
+                               onclick="javascript:pagelid('https://cdn.kingstone.com.tw/newadmin/userpics/180x70_a1806113-1.gif','common-header-marketing-bn','16','https://www.kingstone.com.tw/basics/basics.asp?kmcode=2019478938348&amp;lid=common-header-marketing-bn&amp;actid=wise');"
+                               class="anchor"><img
+                                src="https://cdn.kingstone.com.tw/newadmin/userpics/180x70_a1806113-1.gif"
+                                alt=""><span></span></a></li>
+                    </ul>
+                </div>
+                <div id="tab-9" class="ui-tabs-hide">
+                    <ul>
+                        <li><a href="javascript:void(0)"
+                               onclick="javascript:pagelid('https://cdn.kingstone.com.tw/newadmin/userpics/180x70_a1807090-1.jpg','common-header-marketing-bn','17','https://www.kingstone.com.tw/basics/basics.asp?kmcode=2018611638244&amp;lid=common-header-marketing-bn&amp;actid=wise');"
+                               class="anchor"><img
+                                src="https://cdn.kingstone.com.tw/newadmin/userpics/180x70_a1807090-1.jpg"
+                                alt=""><span></span></a></li>
+                        <li><a href="javascript:void(0)"
+                               onclick="javascript:pagelid('https://cdn.kingstone.com.tw/newadmin/userpics/180x70_d1804001-1.jpg','common-header-marketing-bn','18','https://www.kingstone.com.tw/acg/book_page.asp?kmcode=3060000012621&amp;lid=common-header-marketing-bn&amp;actid=wise');"
+                               class="anchor"><img
+                                src="https://cdn.kingstone.com.tw/newadmin/userpics/180x70_d1804001-1.jpg"
+                                alt=""><span></span></a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div id="nav">
+            <h3>購物目錄</h3>
+            <div class="tabs content_wrapper">
+                <ul>
+
+                    <li class="on"><a href="https://www.kingstone.com.tw/default.asp?actid=MainTop">首頁</a></li>
+
+                    <li class="" id="tab3hrs"><a href="https://www.kingstone.com.tw/3hrs/3hrs_index.asp?actid=MainTop">3h快送</a>
+                    </li>
+
+                    <li class=""><a href="https://www.kingstone.com.tw/book/book_index.asp?actid=MainTop">中文書</a></li>
+                    <li class=""><a href="https://www.kingstone.com.tw/english/eng_index.asp?actid=MainTop">英文書</a></li>
+                    <!--li class=""><a href="https://www.kingstone.com.tw/simple/simple_index.asp?actid=MainTop">&#31777;&#39636;&#26360;</a></li-->
+                    <li class=""><a href="https://www.kingstone.com.tw/mag/mag_index.asp?actid=MainTop">雜誌</a></li>
+                    <li class=""><a href="https://www.kingstone.com.tw/mag/magmook_index.asp?actid=MainTop">MOOK</a>
+                    </li>
+                    <li class=""><a
+                            href="https://www.kingstone.com.tw/stationery/stationery_index.asp?actid=MainTop">文具</a>
+                    </li>
+                    <!--li class=""><a href="https://www.kingstone.com.tw/clothes/index.asp?actid=MainTop">&#32654;&#22941;&#37197;&#39166;</a></li-->
+                    <li class=""><a href="https://www.kingstone.com.tw/toy/toy_index.asp?actid=MainTop">玩具親子</a></li>
+                    <li class=""><a href="https://www.kingstone.com.tw/digi/digi_index.asp?actid=MainTop">3C</a></li>
+                    <li class=""><a
+                            href="https://www.kingstone.com.tw/appliances/appliances_index.asp?actid=MainTop">家電</a>
+                    </li>
+                    <!--li class=""><a href="https://www.kingstone.com.tw/sports/sports_index.asp?actid=MainTop">&#36939;&#21205;&#20241;&#38290;</a></li-->
+                    <li class=""><a href="https://www.kingstone.com.tw/house/house_index.asp?actid=MainTop">居家休閒</a>
+                    </li>
+                    <li class=""><a href="https://www.kingstone.com.tw/wash/wash_index.asp?actid=MainTop">日用品</a></li>
+                    <li class=""><a href="https://www.kingstone.com.tw/acg/acg_index.asp?actid=MainTop">動漫精品</a></li>
+                    <li class=""><a href="https://www.kingstone.com.tw/food/food_index.asp?actid=MainTop">食品</a></li>
+                    <li class=""><a
+                            href="https://www.kingstone.com.tw/event/0000_ticket/ticket.asp?actid=MainTop">售票網</a></li>
+                    <li class=""><a href="https://www.kingstone.com.tw/event/1806_a151/151.asp?actid=MainTop"><font
+                            color="red">希望書包認購</font></a></li>
+
+                    <li class="" id="event1806045"><a
+                            href="https://www.kingstone.com.tw/event/1806_a045/045.asp?actid=MainTop"><font
+                            color="blue">暑期閱讀</font></a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="container">
+        <div id="content_nav"></div>
+        <div class="content_wrapper two_cols">
+            <!-- &#30070;&#19977;&#27396;&#36681;&#28858;&#20108;&#27396;&#29256;&#38754;&#26178;&#65292;&#19999;&#20837;class="two_cols"&#65292;&#20006;&#38577;&#34255;div#promoteSide -->
+            <div id="breadCrumb">
+                您的位置：<a class="home" href="https://www.kingstone.com.tw" title="金石堂網路書店首頁">金石堂網路書店</a><a href="#"
+                                                                                                         title="搜尋結果">搜尋結果</a>
+            </div>
+            <!-- &#20013;&#22830;&#27396; &#38283;&#22987; -->
+            <div id="mainContent">
+                <div class="content">
+                    <!-- &#27169;&#32068;: box -->
+                    <div class="box row_list">
+                        <h2>搜尋:<span>不需要電腦的程式設計課：從遊戲中學習電腦語言</span>，共找到<span>2</span>筆結果</h2>
+                        <div class="search_detail">
+                            <span>搜尋館別：全館搜尋</span>
+
+                            <span>搜尋類型：全文檢索</span>
+                        </div>
+                        <div class="switcher switcher_top">
+                            <div class="sort_type">排序：
+
+                                <span class="current">精準度</span>｜
+                                <a href="/search/result.asp?c_name=%25E4%25B8%258D%25E9%259C%2580%25E8%25A6%2581%25E9%259B%25BB%25E8%2585%25A6%25E7%259A%2584%25E7%25A8%258B%25E5%25BC%258F%25E8%25A8%25AD%25E8%25A8%2588%25E8%25AA%25B2%25EF%25BC%259A%25E5%25BE%259E%25E9%2581%258A%25E6%2588%25B2%25E4%25B8%25AD%25E5%25AD%25B8%25E7%25BF%2592%25E9%259B%25BB%25E8%2585%25A6%25E8%25AA%259E%25E8%25A8%2580&amp;se_type=4&amp;sort=pu_desc">出版日新→舊</a>｜
+                                <a href="/search/result.asp?c_name=%25E4%25B8%258D%25E9%259C%2580%25E8%25A6%2581%25E9%259B%25BB%25E8%2585%25A6%25E7%259A%2584%25E7%25A8%258B%25E5%25BC%258F%25E8%25A8%25AD%25E8%25A8%2588%25E8%25AA%25B2%25EF%25BC%259A%25E5%25BE%259E%25E9%2581%258A%25E6%2588%25B2%25E4%25B8%25AD%25E5%25AD%25B8%25E7%25BF%2592%25E9%259B%25BB%25E8%2585%25A6%25E8%25AA%259E%25E8%25A8%2580&amp;se_type=4&amp;sort=pu_asc">出版日舊→新</a>｜
+                                <a href="/search/result.asp?c_name=%25E4%25B8%258D%25E9%259C%2580%25E8%25A6%2581%25E9%259B%25BB%25E8%2585%25A6%25E7%259A%2584%25E7%25A8%258B%25E5%25BC%258F%25E8%25A8%25AD%25E8%25A8%2588%25E8%25AA%25B2%25EF%25BC%259A%25E5%25BE%259E%25E9%2581%258A%25E6%2588%25B2%25E4%25B8%25AD%25E5%25AD%25B8%25E7%25BF%2592%25E9%259B%25BB%25E8%2585%25A6%25E8%25AA%259E%25E8%25A8%2580&amp;se_type=4&amp;sort=pr_asc">價格低→高</a>｜
+                                <a href="/search/result.asp?c_name=%25E4%25B8%258D%25E9%259C%2580%25E8%25A6%2581%25E9%259B%25BB%25E8%2585%25A6%25E7%259A%2584%25E7%25A8%258B%25E5%25BC%258F%25E8%25A8%25AD%25E8%25A8%2588%25E8%25AA%25B2%25EF%25BC%259A%25E5%25BE%259E%25E9%2581%258A%25E6%2588%25B2%25E4%25B8%25AD%25E5%25AD%25B8%25E7%25BF%2592%25E9%259B%25BB%25E8%2585%25A6%25E8%25AA%259E%25E8%25A8%2580&amp;se_type=4&amp;sort=pr_desc">價格高→低</a>｜
+                                <a href="/search/result.asp?c_name=%25E4%25B8%258D%25E9%259C%2580%25E8%25A6%2581%25E9%259B%25BB%25E8%2585%25A6%25E7%259A%2584%25E7%25A8%258B%25E5%25BC%258F%25E8%25A8%25AD%25E8%25A8%2588%25E8%25AA%25B2%25EF%25BC%259A%25E5%25BE%259E%25E9%2581%258A%25E6%2588%25B2%25E4%25B8%25AD%25E5%25AD%25B8%25E7%25BF%2592%25E9%259B%25BB%25E8%2585%25A6%25E8%25AA%259E%25E8%25A8%2580&amp;se_type=4&amp;sort=st_desc">星級高→低</a>
+
+                            </div>
+                            <div class="sort_format">瀏覽：
+
+                                <span class="current">列表</span>｜
+                                <a href="/search/result.asp?c_name=%25E4%25B8%258D%25E9%259C%2580%25E8%25A6%2581%25E9%259B%25BB%25E8%2585%25A6%25E7%259A%2584%25E7%25A8%258B%25E5%25BC%258F%25E8%25A8%25AD%25E8%25A8%2588%25E8%25AA%25B2%25EF%25BC%259A%25E5%25BE%259E%25E9%2581%258A%25E6%2588%25B2%25E4%25B8%25AD%25E5%25AD%25B8%25E7%25BF%2592%25E9%259B%25BB%25E8%2585%25A6%25E8%25AA%259E%25E8%25A8%2580&amp;se_type=4&amp;dis=img">圖片</a>
+
+                            </div>
+                        </div>
+                        <div class="switcher switcher_top pagenum">
+
+                        </div>
+                        <ul>
+
+                            <li class="S3hrs">
+
+                                <!-- &#38917;&#30446;&#38283;&#22987; -->
+                                <span class="classification">
+
+								<a class="main_class" href="/3hrs/3hrs_index.asp?actid=wise&amp;lid=search">3hrs快送</a>
+								：<a href="/3hrs/3hrs_category.asp?class_id=NNNN&amp;actid=wise&amp;lid=search">電腦資訊</a>
+								／<a href="/3hrs/3hrs_category.asp?class_id=LL&amp;actid=wise&amp;lid=search">APP開發／程式設計</a>
+
+                ／<a href="/3hrs/3hrs_category.asp?class_id=LLZ&amp;actid=wise&amp;lid=search">其它程式設計</a>
+
+								</span>
+                                <a class="anchor" title="不需要電腦的程式設計課：從遊戲中學習電腦語言、鍛鍊運算思維，培育AI時代必備的數位素養"
+                                   href="/3hrs/book_page.asp?kmcode=2013120471221&amp;lid=search&amp;actid=wise">
+                                    <img alt="不需要電腦的程式設計課：從遊戲中學習電腦語言、鍛鍊運算思維，培育AI時代必備的數位素養"
+                                         src="https://cdn.kingstone.com.tw/book/images/product/20131/2013120471221/2013120471221s.jpg"
+                                         onerror="noImg(this)">
+
+                                    <span>不需要電腦的程式設計課：從遊戲中學習電腦語言、鍛鍊運算思維，培育AI時代必備的數位素養</span>
+                                </a>
+                                <span class="originalname">
+
+								<span class="bookstars">館主推薦：<span>★★★★☆</span></span>
+
+								<span class="like_show">目前有 <span>1</span> 人說過讚</span>
+
+							</span>
+
+                                <span class="author"><a
+                                        href="javascript:%20location.href=SearchLink('%E9%A4%8A%E5%A7%86%EF%BC%8E%E5%85%8B%E5%88%A9%E6%96%AF%E6%AC%BD','4','au');">養姆．克利斯欽</a>著</span>
+
+                                <span class="publisher"><a
+                                        href="javascript:%20location.href=SearchLink('%E7%A9%8D%E6%9C%A8%20%20%20%20%20%20','4','bl');">積木      </a>出版</span>
+
+                                <span class="publish_time">2018/6/7出版</span>
+
+                                <!--20171025&#26032;&#22686;&#35430;&#38321;&#24433;&#38899;&#37397;-->
+                                <!--<div class="btnfunctionbox">
+                                    <div class="btnft btnread"><a href="#" target="_blank"><span>&#35430;&#38321;</span></a></div>
+                                    <div class="btnft btnmv"><a href="#" target="_blank"><span>&#24433;&#38899;</span></a></div>
+                                </div>--><!--20171025&#26032;&#22686;&#35430;&#38321;&#24433;&#38899;&#37397; end-->
+
+                                <p></p>
+                                <p>
+
+                                    輕鬆打造程式腦，從10歲到100歲一定都能學會寫程式！
+
+
+                                    寫程式就像寫作文，學會單字語法不代表就能寫出好文章。
+
+                                    但如果能先了解程式設計背後的思維與邏輯，
+
+                                    不管以後使用哪種程式語言，都能運用自如，順利完成任務，一生受用。
+
+
+                                    對目前及未來的世代而言，學習如何寫程式已經是跟語文、數學、藝術一樣的基礎能力。在生活中，電腦可以幫忙掃地、洗衣、煮飯；在工作...</p>
+
+                                <span class="price"><span class="discount"><em>79</em>折</span> 特價 <span
+                                        class="sale_price"><em>284</em>元</span></span>
+                                <span class="buynow3hrs"><a
+                                        href="javascript:%20put3hrCart('2013120471221','WISE_BUY','WWW','search_3hrs');"
+                                        title="放入3hrs購物車"><span>3hrs立即購買</span> </a></span>
+                                <font color="#A9853E">3Hrs:台北市、中和、永和、板橋、三重、蘆洲<br>當日配:新店、新莊、土城、樹林、泰山、林口、五股、淡水、汐止<br>基桃當日配(周一至周五):基隆市、桃園區、中壢區、平鎮區、楊梅區、龜山區、八德區、蘆竹區</font>
+
+                                <!--201800126&#38272;&#24066;&#32178;&#36335;&#21516;&#20729;--><span class="samePrice"><a
+                                    href="#" target="_blank">門市/網路同價，單書79折</a></span>
+
+
+                                <!-- &#38917;&#30446;&#32080;&#26463; -->
+                            </li>
+
+                            <li>
+
+                                <!-- &#38917;&#30446;&#38283;&#22987; -->
+                                <span class="classification">
+
+								<a class="main_class" href="/book/book_index.asp?actid=wise&amp;lid=search">中文書</a>
+								：<a href="/book/book_class.asp?class_id=NNNN&amp;actid=wise&amp;lid=search">電腦資訊</a>
+								／<a href="/book/book_class.asp?class_id=LL&amp;actid=wise&amp;lid=search">APP開發／程式設計</a>
+
+                ／<a href="/book/book_class.asp?class_id=LLZ&amp;actid=wise&amp;lid=search">其它程式設計</a>
+
+								</span>
+                                <a class="anchor" title="不需要電腦的程式設計課：從遊戲中學習電腦語言、鍛鍊運算思維，培育AI時代必備的數位素養"
+                                   href="/basics/basics.asp?kmcode=2013120471221&amp;lid=search&amp;actid=wise">
+                                    <img alt="不需要電腦的程式設計課：從遊戲中學習電腦語言、鍛鍊運算思維，培育AI時代必備的數位素養"
+                                         src="https://cdn.kingstone.com.tw/book/images/product/20131/2013120471221/2013120471221s.jpg"
+                                         onerror="noImg(this)">
+
+                                    <span>不需要電腦的程式設計課：從遊戲中學習電腦語言、鍛鍊運算思維，培育AI時代必備的數位素養</span>
+                                </a>
+                                <span class="originalname">
+
+								<span class="bookstars">館主推薦：<span>★★★★☆</span></span>
+
+								<span class="like_show">目前有 <span>1</span> 人說過讚</span>
+
+							</span>
+
+                                <span class="author"><a
+                                        href="javascript:%20location.href=SearchLink('%E9%A4%8A%E5%A7%86%EF%BC%8E%E5%85%8B%E5%88%A9%E6%96%AF%E6%AC%BD','4','au');">養姆．克利斯欽</a>著</span>
+
+                                <span class="publisher"><a
+                                        href="javascript:%20location.href=SearchLink('%E7%A9%8D%E6%9C%A8%20%20%20%20%20%20','4','bl');">積木      </a>出版</span>
+
+                                <span class="publish_time">2018/6/7出版</span>
+
+                                <!--20171025&#26032;&#22686;&#35430;&#38321;&#24433;&#38899;&#37397;-->
+                                <!--<div class="btnfunctionbox">
+                                    <div class="btnft btnread"><a href="#" target="_blank"><span>&#35430;&#38321;</span></a></div>
+                                    <div class="btnft btnmv"><a href="#" target="_blank"><span>&#24433;&#38899;</span></a></div>
+                                </div>--><!--20171025&#26032;&#22686;&#35430;&#38321;&#24433;&#38899;&#37397; end-->
+
+                                <p></p>
+                                <p>
+
+                                    輕鬆打造程式腦，從10歲到100歲一定都能學會寫程式！
+
+
+                                    寫程式就像寫作文，學會單字語法不代表就能寫出好文章。
+
+                                    但如果能先了解程式設計背後的思維與邏輯，
+
+                                    不管以後使用哪種程式語言，都能運用自如，順利完成任務，一生受用。
+
+
+                                    對目前及未來的世代而言，學習如何寫程式已經是跟語文、數學、藝術一樣的基礎能力。在生活中，電腦可以幫忙掃地、洗衣、煮飯；在工作...</p>
+
+                                <span class="price"><span class="discount"><em>79</em>折</span> 特價 <span
+                                        class="sale_price"><em>284</em>元</span></span>
+
+                                <span class="buynow"><a
+                                        href="javascript:%20putCart('2013120471221','WISE_BUY','WWW','search');"><span>立即購買</span> </a></span>
+
+                                <!--201800126&#38272;&#24066;&#32178;&#36335;&#21516;&#20729;--><span class="samePrice"><a
+                                    href="#" target="_blank">門市/網路同價，單書79折</a></span>
+
+                                <span class="promotion"><em>中文書好康：</em>
+							<ul>
+
+								<li><a href="/basics/basics.asp?kmcode=2013120471221&amp;">輕鬆打造程式腦，從10歲到100歲一定都能學會寫程式！《不需要電腦的程式設計課》</a></li>
+
+								<li><a href="/event/1806_a324/324.asp?">◤閱生活，越趨勢◢2018上半年趨勢分析&amp;分類閱讀TOP 5,000，參展書5折起~</a></li>
+
+							</ul>
+							</span>
+
+                                <p><font color="#A9853E">海外寄送，恕無法提供活動贈品。</font></p>
+
+
+                                <!-- &#38917;&#30446;&#32080;&#26463; -->
+                            </li>
+
+                        </ul>
+                        <div class="switcher">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- &#20013;&#22830;&#27396; &#32080;&#26463; -->
+            <!-- &#24038;&#27396; &#38283;&#22987; -->
+            <div id="menuSide" class="sidebox">
+                <div class="box " id="category">
+                    <h2>縮小搜尋範圍</h2>
+                    <ul>
+                        <li>
+                            <h3><a href="#">依館別</a></h3>
+                            <ul>
+
+                                <li><h4><a
+                                        href="/search/result.asp?c_name=%25E4%25B8%258D%25E9%259C%2580%25E8%25A6%2581%25E9%259B%25BB%25E8%2585%25A6%25E7%259A%2584%25E7%25A8%258B%25E5%25BC%258F%25E8%25A8%25AD%25E8%25A8%2588%25E8%25AA%25B2%25EF%25BC%259A%25E5%25BE%259E%25E9%2581%258A%25E6%2588%25B2%25E4%25B8%25AD%25E5%25AD%25B8%25E7%25BF%2592%25E9%259B%25BB%25E8%2585%25A6%25E8%25AA%259E%25E8%25A8%2580&amp;se_type=4&amp;sr1=%E9%A4%A8%E5%88%A5&amp;sr2=3hrs%E5%BF%AB%E9%80%81">3hrs快送<span>(1)</span></a>
+                                </h4></li>
+
+                                <li><h4><a
+                                        href="/search/result.asp?c_name=%25E4%25B8%258D%25E9%259C%2580%25E8%25A6%2581%25E9%259B%25BB%25E8%2585%25A6%25E7%259A%2584%25E7%25A8%258B%25E5%25BC%258F%25E8%25A8%25AD%25E8%25A8%2588%25E8%25AA%25B2%25EF%25BC%259A%25E5%25BE%259E%25E9%2581%258A%25E6%2588%25B2%25E4%25B8%25AD%25E5%25AD%25B8%25E7%25BF%2592%25E9%259B%25BB%25E8%2585%25A6%25E8%25AA%259E%25E8%25A8%2580&amp;se_type=4&amp;sr1=%E9%A4%A8%E5%88%A5&amp;sr2=%E4%B8%AD%E6%96%87%E6%9B%B8">中文書<span>(1)</span></a>
+                                </h4></li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <h3><a href="#">依大分類</a></h3>
+                            <ul>
+
+                                <li><h4><a
+                                        href="/search/result.asp?c_name=%25E4%25B8%258D%25E9%259C%2580%25E8%25A6%2581%25E9%259B%25BB%25E8%2585%25A6%25E7%259A%2584%25E7%25A8%258B%25E5%25BC%258F%25E8%25A8%25AD%25E8%25A8%2588%25E8%25AA%25B2%25EF%25BC%259A%25E5%25BE%259E%25E9%2581%258A%25E6%2588%25B2%25E4%25B8%25AD%25E5%25AD%25B8%25E7%25BF%2592%25E9%259B%25BB%25E8%2585%25A6%25E8%25AA%259E%25E8%25A8%2580&amp;se_type=4&amp;sr1=%E5%A4%A7%E5%88%86%E9%A1%9E&amp;sr2=%E9%9B%BB%E8%85%A6%E8%B3%87%E8%A8%8A">電腦資訊<span>(2)</span></a>
+                                </h4></li>
+
+                            </ul>
+                        </li>
+
+                        <li>
+                            <h3><a href="#">依中分類</a></h3>
+                            <ul>
+
+                                <li><h4><a
+                                        href="/search/result.asp?c_name=%25E4%25B8%258D%25E9%259C%2580%25E8%25A6%2581%25E9%259B%25BB%25E8%2585%25A6%25E7%259A%2584%25E7%25A8%258B%25E5%25BC%258F%25E8%25A8%25AD%25E8%25A8%2588%25E8%25AA%25B2%25EF%25BC%259A%25E5%25BE%259E%25E9%2581%258A%25E6%2588%25B2%25E4%25B8%25AD%25E5%25AD%25B8%25E7%25BF%2592%25E9%259B%25BB%25E8%2585%25A6%25E8%25AA%259E%25E8%25A8%2580&amp;se_type=4&amp;sr1=%E4%B8%AD%E5%88%86%E9%A1%9E&amp;sr2=APP%E9%96%8B%E7%99%BC%EF%BC%8F%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88">APP開發／程式設計<span>(2)</span></a>
+                                </h4></li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <h3><a href="#">依小分類</a></h3>
+                            <ul>
+
+                                <li><h4><a
+                                        href="/search/result.asp?c_name=%25E4%25B8%258D%25E9%259C%2580%25E8%25A6%2581%25E9%259B%25BB%25E8%2585%25A6%25E7%259A%2584%25E7%25A8%258B%25E5%25BC%258F%25E8%25A8%25AD%25E8%25A8%2588%25E8%25AA%25B2%25EF%25BC%259A%25E5%25BE%259E%25E9%2581%258A%25E6%2588%25B2%25E4%25B8%25AD%25E5%25AD%25B8%25E7%25BF%2592%25E9%259B%25BB%25E8%2585%25A6%25E8%25AA%259E%25E8%25A8%2580&amp;se_type=4&amp;sr1=%E5%B0%8F%E5%88%86%E9%A1%9E&amp;sr2=%E5%85%B6%E5%AE%83%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88">其它程式設計<span>(2)</span></a>
+                                </h4></li>
+
+                            </ul>
+                        </li>
+
+
+                        <li>
+                            <h3><a href="#">依系列</a></h3>
+                            <ul>
+
+                                <li><h4><a
+                                        href="/search/result.asp?c_name=%25E4%25B8%258D%25E9%259C%2580%25E8%25A6%2581%25E9%259B%25BB%25E8%2585%25A6%25E7%259A%2584%25E7%25A8%258B%25E5%25BC%258F%25E8%25A8%25AD%25E8%25A8%2588%25E8%25AA%25B2%25EF%25BC%259A%25E5%25BE%259E%25E9%2581%258A%25E6%2588%25B2%25E4%25B8%25AD%25E5%25AD%25B8%25E7%25BF%2592%25E9%259B%25BB%25E8%2585%25A6%25E8%25AA%259E%25E8%25A8%2580&amp;se_type=4&amp;sr1=%E7%B3%BB%E5%88%97&amp;sr2=%E4%B8%8D%E6%AD%B8%E9%A1%9E">不歸類<span>(2)</span></a>
+                                </h4></li>
+
+                            </ul>
+                        </li>
+
+                        <li>
+                            <h3><a href="#">依品牌</a></h3>
+                            <ul>
+
+                                <li><h4><a
+                                        href="/search/result.asp?c_name=%25E4%25B8%258D%25E9%259C%2580%25E8%25A6%2581%25E9%259B%25BB%25E8%2585%25A6%25E7%259A%2584%25E7%25A8%258B%25E5%25BC%258F%25E8%25A8%25AD%25E8%25A8%2588%25E8%25AA%25B2%25EF%25BC%259A%25E5%25BE%259E%25E9%2581%258A%25E6%2588%25B2%25E4%25B8%25AD%25E5%25AD%25B8%25E7%25BF%2592%25E9%259B%25BB%25E8%2585%25A6%25E8%25AA%259E%25E8%25A8%2580&amp;se_type=4&amp;sr1=%E5%93%81%E7%89%8C&amp;sr2=%E4%B8%8D%E6%AD%B8%E9%A1%9E">不歸類<span>(1)</span></a>
+                                </h4></li>
+
+                            </ul>
+                        </li>
+
+                        <li>
+                            <h3><a href="#">依作者</a></h3>
+                            <ul>
+
+                                <li><h4><a
+                                        href="/search/result.asp?c_name=%25E4%25B8%258D%25E9%259C%2580%25E8%25A6%2581%25E9%259B%25BB%25E8%2585%25A6%25E7%259A%2584%25E7%25A8%258B%25E5%25BC%258F%25E8%25A8%25AD%25E8%25A8%2588%25E8%25AA%25B2%25EF%25BC%259A%25E5%25BE%259E%25E9%2581%258A%25E6%2588%25B2%25E4%25B8%25AD%25E5%25AD%25B8%25E7%25BF%2592%25E9%259B%25BB%25E8%2585%25A6%25E8%25AA%259E%25E8%25A8%2580&amp;se_type=4&amp;sr1=%E4%BD%9C%E8%80%85&amp;sr2=%E9%A4%8A%E5%A7%86%EF%BC%8E%E5%85%8B%E5%88%A9%E6%96%AF%E6%AC%BD">養姆．克利斯欽<span>(2)</span></a>
+                                </h4></li>
+
+                            </ul>
+                        </li>
+
+                        <li>
+                            <h3><a href="#">依出版社</a></h3>
+                            <ul>
+
+                                <li><h4><a
+                                        href="/search/result.asp?c_name=%25E4%25B8%258D%25E9%259C%2580%25E8%25A6%2581%25E9%259B%25BB%25E8%2585%25A6%25E7%259A%2584%25E7%25A8%258B%25E5%25BC%258F%25E8%25A8%25AD%25E8%25A8%2588%25E8%25AA%25B2%25EF%25BC%259A%25E5%25BE%259E%25E9%2581%258A%25E6%2588%25B2%25E4%25B8%25AD%25E5%25AD%25B8%25E7%25BF%2592%25E9%259B%25BB%25E8%2585%25A6%25E8%25AA%259E%25E8%25A8%2580&amp;se_type=4&amp;sr1=%E5%87%BA%E7%89%88%E7%A4%BE&amp;sr2=%E7%A9%8D%E6%9C%A8%20%20%20%20%20%20">積木
+                                    <span>(2)</span></a></h4></li>
+
+                            </ul>
+                        </li>
+
+                        <li>
+                            <h3><a href="#">依價格區間</a></h3>
+                            <ul>
+
+                                <li><h4><a
+                                        href="/search/result.asp?c_name=%25E4%25B8%258D%25E9%259C%2580%25E8%25A6%2581%25E9%259B%25BB%25E8%2585%25A6%25E7%259A%2584%25E7%25A8%258B%25E5%25BC%258F%25E8%25A8%25AD%25E8%25A8%2588%25E8%25AA%25B2%25EF%25BC%259A%25E5%25BE%259E%25E9%2581%258A%25E6%2588%25B2%25E4%25B8%25AD%25E5%25AD%25B8%25E7%25BF%2592%25E9%259B%25BB%25E8%2585%25A6%25E8%25AA%259E%25E8%25A8%2580&amp;se_type=4&amp;sr1=%E5%83%B9%E6%A0%BC%E5%8D%80%E9%96%93&amp;sr2=250%E5%85%83%20~%20499%E5%85%83">250元
+                                    ~ 499元<span>(2)</span></a></h4></li>
+
+                            </ul>
+                        </li>
+
+                        <li>
+                            <h3><a href="#">依出版日期</a></h3>
+                            <ul>
+
+                                <li><h4><a
+                                        href="/search/result.asp?c_name=%25E4%25B8%258D%25E9%259C%2580%25E8%25A6%2581%25E9%259B%25BB%25E8%2585%25A6%25E7%259A%2584%25E7%25A8%258B%25E5%25BC%258F%25E8%25A8%25AD%25E8%25A8%2588%25E8%25AA%25B2%25EF%25BC%259A%25E5%25BE%259E%25E9%2581%258A%25E6%2588%25B2%25E4%25B8%25AD%25E5%25AD%25B8%25E7%25BF%2592%25E9%259B%25BB%25E8%2585%25A6%25E8%25AA%259E%25E8%25A8%2580&amp;se_type=4&amp;sr1=%E5%87%BA%E7%89%88%E6%97%A5%E6%9C%9F&amp;sr2=%E6%9C%80%E8%BF%91%E4%B8%89%E5%80%8B%E6%9C%88">最近三個月<span>(2)</span></a>
+                                </h4></li>
+
+                                <li><h4><a
+                                        href="/search/result.asp?c_name=%25E4%25B8%258D%25E9%259C%2580%25E8%25A6%2581%25E9%259B%25BB%25E8%2585%25A6%25E7%259A%2584%25E7%25A8%258B%25E5%25BC%258F%25E8%25A8%25AD%25E8%25A8%2588%25E8%25AA%25B2%25EF%25BC%259A%25E5%25BE%259E%25E9%2581%258A%25E6%2588%25B2%25E4%25B8%25AD%25E5%25AD%25B8%25E7%25BF%2592%25E9%259B%25BB%25E8%2585%25A6%25E8%25AA%259E%25E8%25A8%2580&amp;se_type=4&amp;sr1=%E5%87%BA%E7%89%88%E6%97%A5%E6%9C%9F&amp;sr2=%E6%9C%80%E8%BF%91%E5%8D%8A%E5%B9%B4">最近半年<span>(2)</span></a>
+                                </h4></li>
+
+                                <li><h4><a
+                                        href="/search/result.asp?c_name=%25E4%25B8%258D%25E9%259C%2580%25E8%25A6%2581%25E9%259B%25BB%25E8%2585%25A6%25E7%259A%2584%25E7%25A8%258B%25E5%25BC%258F%25E8%25A8%25AD%25E8%25A8%2588%25E8%25AA%25B2%25EF%25BC%259A%25E5%25BE%259E%25E9%2581%258A%25E6%2588%25B2%25E4%25B8%25AD%25E5%25AD%25B8%25E7%25BF%2592%25E9%259B%25BB%25E8%2585%25A6%25E8%25AA%259E%25E8%25A8%2580&amp;se_type=4&amp;sr1=%E5%87%BA%E7%89%88%E6%97%A5%E6%9C%9F&amp;sr2=%E6%9C%80%E8%BF%91%E4%B8%80%E5%B9%B4">最近一年<span>(2)</span></a>
+                                </h4></li>
+
+                                <li><h4><a
+                                        href="/search/result.asp?c_name=%25E4%25B8%258D%25E9%259C%2580%25E8%25A6%2581%25E9%259B%25BB%25E8%2585%25A6%25E7%259A%2584%25E7%25A8%258B%25E5%25BC%258F%25E8%25A8%25AD%25E8%25A8%2588%25E8%25AA%25B2%25EF%25BC%259A%25E5%25BE%259E%25E9%2581%258A%25E6%2588%25B2%25E4%25B8%25AD%25E5%25AD%25B8%25E7%25BF%2592%25E9%259B%25BB%25E8%2585%25A6%25E8%25AA%259E%25E8%25A8%2580&amp;se_type=4&amp;sr1=%E5%87%BA%E7%89%88%E6%97%A5%E6%9C%9F&amp;sr2=%E6%9C%80%E8%BF%91%E4%B8%89%E5%B9%B4">最近三年<span>(2)</span></a>
+                                </h4></li>
+
+                            </ul>
+                        </li>
+
+                        <li>
+                            <h3><a href="#">依購買狀態</a></h3>
+                            <ul>
+
+                                <li><h4><a
+                                        href="/search/result.asp?c_name=%25E4%25B8%258D%25E9%259C%2580%25E8%25A6%2581%25E9%259B%25BB%25E8%2585%25A6%25E7%259A%2584%25E7%25A8%258B%25E5%25BC%258F%25E8%25A8%25AD%25E8%25A8%2588%25E8%25AA%25B2%25EF%25BC%259A%25E5%25BE%259E%25E9%2581%258A%25E6%2588%25B2%25E4%25B8%25AD%25E5%25AD%25B8%25E7%25BF%2592%25E9%259B%25BB%25E8%2585%25A6%25E8%25AA%259E%25E8%25A8%2580&amp;se_type=4&amp;sr1=%E8%B3%BC%E8%B2%B7%E7%8B%80%E6%85%8B&amp;sr2=%E5%8F%AF%E8%B3%BC%E8%B2%B7%E5%95%86%E5%93%81">可購買商品<span>(2)</span></a>
+                                </h4></li>
+
+                            </ul>
+                        </li>
+
+                        <li>
+                            <h3><a href="#">依18禁專區</a></h3>
+                            <ul>
+
+                                <li><h4><a
+                                        href="/search/result.asp?c_name=%25E4%25B8%258D%25E9%259C%2580%25E8%25A6%2581%25E9%259B%25BB%25E8%2585%25A6%25E7%259A%2584%25E7%25A8%258B%25E5%25BC%258F%25E8%25A8%25AD%25E8%25A8%2588%25E8%25AA%25B2%25EF%25BC%259A%25E5%25BE%259E%25E9%2581%258A%25E6%2588%25B2%25E4%25B8%25AD%25E5%25AD%25B8%25E7%25BF%2592%25E9%259B%25BB%25E8%2585%25A6%25E8%25AA%259E%25E8%25A8%2580&amp;se_type=4&amp;sr1=18%E7%A6%81%E5%B0%88%E5%8D%80&amp;sr2=%E6%99%AE%E9%80%9A%E7%B4%9A">普通級<span>(2)</span></a>
+                                </h4></li>
+
+                            </ul>
+                        </li>
+
+                        <li>
+                            <h3><a href="#">依版本規格</a></h3>
+                            <ul>
+
+                                <li><h4><a
+                                        href="/search/result.asp?c_name=%25E4%25B8%258D%25E9%259C%2580%25E8%25A6%2581%25E9%259B%25BB%25E8%2585%25A6%25E7%259A%2584%25E7%25A8%258B%25E5%25BC%258F%25E8%25A8%25AD%25E8%25A8%2588%25E8%25AA%25B2%25EF%25BC%259A%25E5%25BE%259E%25E9%2581%258A%25E6%2588%25B2%25E4%25B8%25AD%25E5%25AD%25B8%25E7%25BF%2592%25E9%259B%25BB%25E8%2585%25A6%25E8%25AA%259E%25E8%25A8%2580&amp;se_type=4&amp;sr1=%E7%89%88%E6%9C%AC%E8%A6%8F%E6%A0%BC&amp;sr2=%E5%B9%B3%E8%A3%9D">平裝<span>(2)</span></a>
+                                </h4></li>
+
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <!-- &#24038;&#27396; &#32080;&#26463; -->
+            <!-- &#21491;&#27396; &#38283;&#22987;-->
+            <div id="promoteSide" class="sidebox"></div>
+            <!-- &#21491;&#27396; &#32080;&#26463; -->
+        </div>
+    </div>
+    <div id="footer">
+        <div class="floatfix">
+            <div class="back_top clearman"><a href="#">↑回上方</a></div>
+
+            <div class="content_wrapper floatfix">
+                <h3><a href="https://www.kingstone.com.tw" title="金石堂網路書店" class="diver">金石堂網路書店</a></h3>
+                <ul class="links">
+                    <li><a target="_blank" href="https://www.kingstone.com.tw" title="金石堂網路書店首頁">首頁</a></li>
+                    <li><a target="_blank" href="https://www.kingstone.com.tw/about/about_102.asp" title="關於金石堂網路書店">關於金石堂網路書店</a>
+                    </li>
+
+                    <li><a target="_blank"
+                           href="http://www.104.com.tw/jobbank/cust_job/introduce.cfm?j=383a42283c6c3e2430683b1d1d1d1d5f2443a363189j56&amp;jobsource=checkc"
+                           title="人才招募">人才招募</a></li>
+                    <li><a target="_blank" href="https://www.kingstone.com.tw/QnA/QA_index.asp" title="客服中心">客服中心</a>
+                    </li>
+                    <li><a target="_blank" href="https://www.kingstone.com.tw/recruit/recruit.asp" title="異業合作">異業合作</a>
+                    </li>
+                    <li><a target="_blank" href="https://www.kingstone.com.tw/publish/publish.asp" title="出版情報">出版情報</a>
+                    </li>
+                    <li><a target="_blank" href="https://www.kingstone.com.tw/mobile/index.asp" title="金石堂+">手機版</a>
+                    </li>
+
+                    <li><a target="_blank" href="https://www.kingstone.com.tw/about/about_101.asp" title="關於金石堂書店">關於金石堂書店</a>
+                    </li>
+                    <li><a target="_blank" href="https://www.kingstone.com.tw/about/about_2.asp" title="金石堂書店全台門市">金石堂書店全台門市</a>
+                    </li>
+                    <li class="socialIcon"><a target="_blank" href="https://zh-tw.facebook.com/kingstonefb/"
+                                              title="金石堂網路書店-非讀book">
+                        <img src="https://cdn.kingstone.com.tw/images/ks_downfb_icons.jpg" alt="facebook" width="18"
+                             height="18" border="0">
+                    </a></li>
+                    <li class="socialIcon last"><a target="_blank" href="https://line.me/R/ti/p/%40iaj2483f"
+                                                   title="金石堂網路書店-LINE官方帳號">
+                        <img src="https://www.kingstone.com.tw/images/ks_downline_icons.jpg" alt="Line官方帳號" width="18"
+                             height="18" border="0">
+                    </a></li>
+                </ul>
+                <div class="company_info">
+                    <ul>
+                        <li>客服專線：02-2364-9989</li>
+                        <li>傳真：02-2364-4672</li>
+                        <li>客服時間：週一至週五 9：00∼12：30 及 13：30∼18：00（例假日除外）</li>
+                        <li>地址：100 台灣台北市中正區汀州路三段 160 巷 3 號 2 樓</li>
+                        <li>Copyright©2016, Digital Kingstone Co., Ltd. 金石網絡股份有限公司</li>
+                    </ul>
+
+                    <!------fb-page plugin------>
+                    <iframe id="fb_page"
+                            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fkingstonefb&amp;tabs&amp;width=410&amp;height=154&amp;small_header=true&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId"
+                            width="410" height="154" style="border:none;overflow:hidden; margin-top:8px;" scrolling="no"
+                            frameborder="0" allowtransparency="true"></iframe>
+                    <!------fb-page plugin end------>
+
+                </div>
+                <div class="additional_info">
+                    <p>瀏覽本站建議使用：Internet Explorer 8.0 以上或 <a href="http://moztw.org/" target="_blank">FireFox</a>、<a
+                            href="http://www.google.com/chrome" target="_blank">Google Chrome</a>、<a
+                            href="http://www.apple.com/tw/safari/download/" target="_blank">Safari</a> 等瀏覽器。</p>
+                    <p>本網站已依台灣網站內容分級規定處理且符合電子商務、安全交易</p>
+                    <ul>
+                        <li style="width:58px;"><a title="SOSA優良電子商店"
+                                                   href="http://www.sosa.org.tw/ec/ec_info.asp?markid=70832800"><img
+                                src="/webimg/licence-sosa.gif" alt="SOSAec"></a></li>
+                        <li style="width:208px;"><a title="SOSA資訊透明化電子商店"
+                                                    href="http://www.sosa.org.tw/ec/ec_infotransparency.asp?markid=70832800"><img
+                                src="/webimg/licence-transparency.png" alt="SOSAec"></a></li>
+                        <li style="width:118px;">
+                            <div id="twcaseal" class="small3" style="display:inline"><img
+                                    src="/webimg/twcaseal_small3.jpg" alt="twcaseal"></div>
+                        </li>
+                        <li style="width:58px;"><a href="https://topic.cheers.com.tw/issue/2017/jobs/top100.aspx"
+                                                   target="_blank" title="《Cheers》雜誌2017年新世代最嚮往企業調查Top100"><img
+                                src="https://topic.cheers.com.tw/issue/2017/jobs/images/cheers_top100_100.png"></a></li>
+                        <li style="width:208px;"><img src="/webimg/licence-paypal.gif" alt="paypal"></li>
+                        <li style="width:118px;"><a title="網路提款機myATM"
+                                                    href="https://www.mybank.com.tw/myatm/howtouse01.asp"><img
+                                src="/webimg/licence-atm.gif" alt="atm"></a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--appAD-20170602-->
+        <!--div class="appADbox" style="display:none;">
+            <div class="appADcontent">
+                <div class="appADicon"><img src="/images/ks-app-code.png" width="100%" /></div>
+                <div class="appADtext"><span>&#37329;&#30707;&#22530;APP</span><br>&#20986;/&#21040;&#36008;&#25552;&#37266;&#19981;&#28431;&#25509;&#65292;&#35731;&#24744;&#20415;&#21033;&#38568;&#34892;</div>
+                <a href="/event/1702_mktapp/app.asp" class="appADdownload" target="_blank"><img src="/images/ks-app-download.png" width="100%" /></a>
+                <div class="appADclose"><img src="/images/ks-app-close.png" width="100%" /></div>
+            </div>
+        </div-->
+        <!--appAD-20170602 end-->
+
+        <!----------20180410&#23541;i&#26371;&#21729;&#29983;&#26085;---------->
+
+
+    </div>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-1762299-1', 'auto');
+        ga('require', 'displayfeatures');
+        ga('send', 'pageview');
+    </script>
+
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        var google_conversion_id = 875659764;
+        var google_custom_params = window.google_tag_params;
+        var google_remarketing_only = true;
+        /* ]]> */
+    </script>
+    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+    </script>
+    <noscript>
+        <div style="display:inline;">
+            <img height="1" width="1" style="border-style:none;" alt=""
+                 src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/875659764/?value=0&amp;guid=ON&amp;script=0">
+        </div>
+    </noscript>
+
+    <script type="text/javascript">
+        (function () {
+            var e = {
+                "mid": 47,
+                "pid": "search",
+                "kw": "&#19981;&#38656;&#35201;&#38651;&#33126;&#30340;&#31243;&#24335;&#35373;&#35336;&#35506;&#65306;&#24478;&#36938;&#25138;&#20013;&#23416;&#32722;&#38651;&#33126;&#35486;&#35328;",
+                "sitem": "2013120471221,2013120471221",
+                "uid": ""
+            };
+            var f = 'undefined';
+            var g = "http://";
+            var h = "https://";
+            var i = "//";
+            var j = g;
+            if (document.location.href.indexOf(g) != -1) {
+                j = i
+            } else if (document.location.href.indexOf(h) != -1) {
+                j = i
+            }
+
+            function l(v) {
+                if (v == "") return false;
+                return (eval("typeof " + v) != f)
+            }
+
+            function m(a) {
+                var s = document.createElement('script');
+                s.setAttribute('type', 'text/javascript');
+                s.setAttribute('src', a);
+                return s
+            }
+
+            function n(a) {
+                var b = document.getElementsByTagName('head')[0];
+                if (b) b.appendChild(m(a)); else document.body.appendChild(m(a))
+            }
+
+            function o(a, b) {
+                var c = setInterval(function () {
+                    if (l(a)) {
+                        clearInterval(c);
+                        b()
+                    }
+                }, 50)
+            }
+
+            function p(a, b, c, d) {
+                if (l(b) == false) {
+                    n(a);
+                    o(b, function () {
+                        if (c) c();
+                        if (d) d()
+                    })
+                } else {
+                    if (d) d()
+                }
+            }
+
+            var k = j + "rec.scupio.com/recweb/js/rec.js";
+            p(k, "scupioec", null, function () {
+                self.scupioec.call(e)
+            })
+        })();
+    </script>
+    <script type="text/javascript">
+
+        var local = document.location.href;
+        if (local.indexOf("result.asp", 0) > 0) {
+            $.ajax({url: "/js/browse_record.js?v=1.1"});
+            $.ajax({url: "/js/search_record.js?v=1.1"});
+        } else {
+            $.ajax({url: "/js/browse_record.js?v=1.1"});
+        }
+    </script>
+    <span style="color:#FFFFFF">.14</span>
+</div>
+
+</body>
