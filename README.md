@@ -1,5 +1,6 @@
-# How is this book
+# 好書客 How is this book
 
+![](https://github.com/WadeHuang1993/HowIsThisBook/blob/master/public/images/readme_banner.png)
 ![](https://img.shields.io/github/last-commit/WadeHuang1993/HowIsThisBook.svg)
 ![](https://img.shields.io/travis/php-v/symfony/symfony.svg)
 ![](https://img.shields.io/badge/Laravel-5.6-f4645f.svg)
