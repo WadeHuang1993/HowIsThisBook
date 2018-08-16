@@ -9,7 +9,7 @@
 
 ## 網站需求：
 
-[詳細線上需求文件在 DokuWiki](http://www.utools.info/code_wiki/doku.php?id=howisthisbook)
+[需求文件、SA/SD 與 DB Schema 在 DokuWiki](http://www.utools.info/code_wiki/doku.php?id=howisthisbook)
 
 [工作項目分配在 KanbanFlow](https://kanbanflow.com/board/MoDo3Cqr)
 
