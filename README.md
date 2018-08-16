@@ -57,7 +57,7 @@ Apache + Laravel + PHP7。
 
 前端：
 
-未定。
+Vue-CLI
 
 ## 套件
 
