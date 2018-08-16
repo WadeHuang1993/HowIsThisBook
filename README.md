@@ -9,6 +9,8 @@
 
 ## 網站需求：
 
+[詳細線上需求文件在 DokuWiki](http://www.utools.info/code_wiki/doku.php?id=howisthisbook)
+
 平台提供書籍列表與內容，供匿名/會員（待討論）讀者發表讀書心得。
 
 不同於求職天眼通，「好書客」提供一個平台，讓讀者反映真實的書籍心得。
